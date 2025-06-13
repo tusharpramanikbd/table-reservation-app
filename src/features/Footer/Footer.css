@@ -1,0 +1,32 @@
+.footer-bg {
+  background-color: azure;
+  padding: 24px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    max-width: 80%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

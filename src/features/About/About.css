@@ -12,3 +12,15 @@
   object-fit: cover;
   border-radius: 16px;
 }
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 24px;
+    max-width: 80%;
+  }
+
+  .about-container img {
+    width: 100%;
+  }
+}
