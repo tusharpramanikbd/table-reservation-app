@@ -35,7 +35,7 @@ const specialItems = [
 
 function Specials() {
   return (
-    <div className="specials-container">
+    <section className="specials-container">
       <div className="specials-header">
         <h2>This Weeks Specials</h2>
         <Button title="See all menus" />
@@ -45,7 +45,7 @@ function Specials() {
           return <SpecialCard key={id} {...rest} />;
         })}
       </div>
-    </div>
+    </section>
   );
 }
 
