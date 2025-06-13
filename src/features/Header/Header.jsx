@@ -14,7 +14,12 @@ const Header = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Button title="Reserve a Table" />
+          <Button
+            title="Reserve a Table"
+            customStyles={{
+              marginTop: "16px",
+            }}
+          />
         </div>
         <div className="header-img">
           <img src={headerImg} alt="header-img" />

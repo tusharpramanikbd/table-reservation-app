@@ -1,0 +1,27 @@
+.specials-container {
+  max-width: 1200px;
+  margin: 24px auto;
+}
+
+.specials-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.specials-content {
+  display: flex;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .special-card-container {
+    width: 80% !important;
+  }
+  .specials-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+}

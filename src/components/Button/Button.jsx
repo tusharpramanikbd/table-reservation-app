@@ -1,6 +1,6 @@
 const Button = ({ title, onClick, customStyles }) => {
   return (
-    <button style={{ ...buttonStyles, ...customStyles }} onClick={onClick}>
+    <button style={{ ...baseButtonStyles, ...customStyles }} onClick={onClick}>
       {title}
     </button>
   );
@@ -8,16 +8,13 @@ const Button = ({ title, onClick, customStyles }) => {
 
 export default Button;
 
-const buttonStyles = {
+const baseButtonStyles = {
   width: "160px",
   height: "40px",
   backgroundColor: "#f4ce14",
   color: "#000",
   border: "none",
   borderRadius: "24px",
-  cursor: "pointer",
   fontSize: "16px",
   fontWeight: "500",
-  textDecoration: "none",
-  marginTop: "16px",
 };
