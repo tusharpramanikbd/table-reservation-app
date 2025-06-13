@@ -1,3 +1,4 @@
+import About from "../About/About";
 import Specials from "../Specials/Specials";
 import Testimonials from "../Testimonials/Testimonials";
 
@@ -6,6 +7,7 @@ const Main = () => {
     <main>
       <Specials />
       <Testimonials />
+      <About />
     </main>
   );
 };
