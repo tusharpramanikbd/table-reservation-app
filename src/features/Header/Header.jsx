@@ -1,6 +1,7 @@
 import React from "react";
 import headerImg from "../../assets/restauranfood.jpg";
 import "./Header.css";
+import Button from "../../components/Button/Button";
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <button>Reserve a Table</button>
+          <Button title="Reserve a Table" />
         </div>
         <div className="header-img">
           <img src={headerImg} alt="header-img" />
