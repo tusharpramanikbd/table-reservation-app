@@ -1,15 +1,16 @@
+import { Route, Routes } from "react-router";
+import HomePage from "./pages/HomePage";
+import ReservationPage from "./pages/ReservationPage";
 import Navbar from "./features/Navbar/Navbar";
-import Header from "./features/Header/Header";
-import Main from "./features/Main/Main";
-import Footer from "./features/Footer/Footer";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Header />
-      <Main />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/reservation" element={<ReservationPage />} />
+      </Routes>
     </>
   );
 }

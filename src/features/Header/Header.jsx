@@ -2,8 +2,15 @@ import React from "react";
 import headerImg from "../../assets/restauranfood.jpg";
 import "./Header.css";
 import Button from "../../components/Button/Button";
+import { useNavigate } from "react-router";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleReservationRedirect = () => {
+    navigate("reservation");
+  };
+
   return (
     <header>
       <div className="header-content">
@@ -19,6 +26,7 @@ const Header = () => {
             customStyles={{
               marginTop: "16px",
             }}
+            onClick={handleReservationRedirect}
           />
         </div>
         <div className="header-img">
