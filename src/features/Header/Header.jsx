@@ -9,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleReservationRedirect = () => {
-    navigate(routes.RESERVATION);
+    navigate(routes.BOOKING);
   };
 
   return (

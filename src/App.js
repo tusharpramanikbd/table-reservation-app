@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
-import ReservationPage from "./pages/ReservationPage";
+import BookingPage from "./pages/BookingPage";
 import Navbar from "./features/Navbar/Navbar";
 import { routes } from "./constants/routes";
 
@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path={routes.HOME} element={<HomePage />} />
-        <Route path={routes.RESERVATION} element={<ReservationPage />} />
+        <Route path={routes.BOOKING} element={<BookingPage />} />
       </Routes>
     </>
   );
