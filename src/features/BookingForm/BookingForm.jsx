@@ -1,8 +1,9 @@
 import React from "react";
+import "./BookingForm.css";
 
 function BookingForm() {
   return (
-    <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+    <form className="booking-form-container">
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" />
       <label htmlFor="res-time">Choose time</label>

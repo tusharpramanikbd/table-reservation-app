@@ -5,6 +5,7 @@ import "./BookingPage.css";
 function BookingPage() {
   return (
     <main className="booking-container">
+      <h2>Book your table!</h2>
       <BookingForm />
     </main>
   );
