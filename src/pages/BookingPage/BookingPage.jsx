@@ -1,21 +1,62 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import BookingForm from "../../features/BookingForm/BookingForm";
 import "./BookingPage.css";
+import { fetchAPI, submitAPI } from "../../mockApi";
 
-const initializeTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-
-const updateTimes = (state, action) => {
-  console.log("State", state);
-  console.log("Action", action);
-  return state;
-};
+const initialState = [];
 
 function BookingPage() {
-  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
+  const updateTimes = (state, action) => {
+    const dates = fetchData(action);
+    return dates;
+  };
+
+  const fetchData = (date) => {
+    try {
+      const result = fetchAPI(date);
+      return result;
+    } catch (err) {
+      console.error("Error fetching data:", err);
+    }
+  };
+
+  const [availableTimes, dispatch] = useReducer(updateTimes, initialState);
+
+  useEffect(() => {
+    const initializeTimes = () => {
+      try {
+        const today = new Date();
+        dispatch(today);
+      } catch (err) {
+        console.error("Error Initializing data:", err);
+      }
+    };
+
+    initializeTimes();
+  }, []);
+
+  const submitForm = (formData) => {
+    try {
+      const result = submitAPI(formData);
+
+      if (result) {
+        console.log("Booking Success");
+      } else {
+        console.log("Booking Failed");
+      }
+    } catch (err) {
+      console.error("Error fetching data:", err);
+    }
+  };
+
   return (
     <main className="booking-container">
       <h2>Book your table!</h2>
-      <BookingForm availableTimes={availableTimes} updateTimes={dispatch} />
+      <BookingForm
+        availableTimes={availableTimes}
+        updateTimes={dispatch}
+        submitForm={submitForm}
+      />
     </main>
   );
 }
