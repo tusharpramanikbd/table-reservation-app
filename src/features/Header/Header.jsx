@@ -3,12 +3,13 @@ import headerImg from "../../assets/restauranfood.jpg";
 import "./Header.css";
 import Button from "../../components/Button/Button";
 import { useNavigate } from "react-router";
+import { routes } from "../../constants/routes";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const handleReservationRedirect = () => {
-    navigate("reservation");
+    navigate(routes.RESERVATION);
   };
 
   return (
