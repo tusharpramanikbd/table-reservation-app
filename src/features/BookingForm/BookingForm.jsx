@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./BookingForm.css";
 
-const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-
-function BookingForm() {
-  const [date, setDate] = useState("");
-  const [bookingTime, setBookingTime] = useState(availableTimes[0]);
+function BookingForm({ availableTimes, updateTimes }) {
+  const [bookingTime, setBookingTime] = useState("");
   const [numOfGuests, setNumOfGuests] = useState("1");
   const [occasion, setOccation] = useState("Birthday");
 
@@ -15,8 +12,7 @@ function BookingForm() {
       <input
         type="date"
         id="res-date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
+        onChange={(e) => updateTimes(e.target.value)}
       />
       <label htmlFor="res-time">Choose time</label>
       <select
@@ -24,7 +20,7 @@ function BookingForm() {
         value={bookingTime}
         onChange={(e) => setBookingTime(e.target.value)}
       >
-        {availableTimes.map((val, index) => (
+        {availableTimes?.map((val, index) => (
           <option key={index}>{val}</option>
         ))}
       </select>
