@@ -40,9 +40,9 @@ function BookingPage() {
       const result = submitAPI(formData);
 
       if (result) {
-        console.log("Booking Success");
+        alert("Booking is successfully completed");
       } else {
-        console.log("Booking Failed");
+        alert("Booking is failed");
       }
     } catch (err) {
       console.error("Error fetching data:", err);
