@@ -8,6 +8,11 @@
   border-radius: 16px;
 }
 
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
 @media (max-width: 768px) {
   .booking-form-container {
     width: 80%;
