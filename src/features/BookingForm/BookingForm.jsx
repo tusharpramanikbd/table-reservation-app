@@ -125,6 +125,7 @@ function BookingForm({ availableTimes, updateTimes, submitForm }) {
         type="submit"
         value="Make Your reservation"
         disabled={!formik.isValid}
+        aria-label="Make Your reservation"
       />
     </form>
   );
